@@ -1,0 +1,29 @@
+# ---- Python virtual environment ----
+its-env/
+.venv/
+venv/
+
+# ---- Python cache ----
+__pycache__/
+*.pyc
+
+# ---- Large data (rebuilt by scripts, or kept outside the repo) ----
+data/tiles/
+data/dataset/
+data/dataset_split/
+
+# ---- Training outputs and model weights ----
+runs/
+outputs/
+*.pt
+*.pth
+*.ckpt
+
+# ---- Editor / OS files ----
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- Jupyter ----
+.ipynb_checkpoints/

@@ -38,7 +38,7 @@ for way in ways:
 intersections = [
     (node_id, nodes[node_id]["lat"], nodes[node_id]["lon"])
     for node_id, count in node_way_count.items()
-    if count >= 3 and node_id in nodes
+    if count >= 2 and node_id in nodes
 ]
 # Figure out which downloaded tile contains the most intersections
 def latlon_to_tile(lat, lon, zoom):
