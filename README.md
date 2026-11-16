@@ -1,9 +1,7 @@
-# Road Intersection Detection from Satellite Imagery
+﻿# Road Intersection Detection from Satellite Imagery
 
 **Course:** Intelligent Transportation Systems (ITS), Gati Shakti Vishwavidyalaya (GSV)
 **Project:** DL-Based Road Feature Extraction from Satellite Imagery. Feature of interest: Road Intersection Detection via Road Network Graph Extraction
-**Implementation:** Pratima Chauhan
-**Original proposal team:** Vedant Jadhav, Pratima Chauhan, Divy Jain
 
 ---
 
@@ -101,7 +99,7 @@ Check each script's `--help` for exact argument names. Training took about 2.7 m
 
 ---
 
-## Approach A — YOLO baseline (v1, baseline)
+## Approach A â€” YOLO baseline (v1, baseline)
 
 ### Pipeline
 
@@ -116,7 +114,7 @@ python scripts/train.py                   # YOLO26n, imgsz 256, up to 150 epochs
 python scripts/visualize_predictions.py   # sample predictions -> data/prediction_samples/
 ```
 
-Study area: Gandhinagar sector grid, bounding box 72.63–72.65 E, 23.21–23.23 N.
+Study area: Gandhinagar sector grid, bounding box 72.63â€“72.65 E, 23.21â€“23.23 N.
 
 ### Result (validation set)
 
@@ -130,7 +128,7 @@ Values are the best-mAP@0.5 row of `results.csv`. Training curves and the confus
 
 1. **Data leakage:** 14 of the 53 validation images also appear in the training folder, because `split_dataset.py` was run twice without emptying its output folder. The figures above are therefore likely optimistic.
 2. **No held-out test set:** the validation set was also used for early stopping and selecting `best.pt`.
-3. **Labelling rule:** a node is labelled an intersection if it appears in ≥2 OSM ways. A way-count is not the same as junction degree: it can mark simple road continuations (one road split into two OSM ways) as junctions. The query also includes footways and service roads.
+3. **Labelling rule:** a node is labelled an intersection if it appears in â‰¥2 OSM ways. A way-count is not the same as junction degree: it can mark simple road continuations (one road split into two OSM ways) as junctions. The query also includes footways and service roads.
 4. **Random tile split:** neighbouring tiles share roads at their edges, so train and validation are not spatially independent.
 
 The detector should be treated as an experimental baseline, not an accurate model.
@@ -155,19 +153,19 @@ Tested with Python 3.13.2, PyTorch 2.6.0 (CUDA 12.4 build), NVIDIA RTX 4050 Lapt
 
 ```
 road-intersection-detection/
-├── scripts/            YOLO baseline scripts (Approach A)
-├── segmentation/       U-Net data split, training, evaluation, mosaic prediction
-├── graph_extraction/   skeleton -> graph, cleaning, junctions
-├── geospatial/         georeferencing, OSM validation, dashboard builder, sweep, YOLO comparison
-├── data/               OSM intersections, YOLO config, prediction samples
-│                       (tiles, datasets and splits are git-ignored)
-├── docs/
-│   ├── PROJECT_LOG.md  decisions, findings, errors and results
-│   ├── BUSINESS_SLIDE.md
-│   ├── dashboard/      the interactive map (open dashboard.html in Chrome or Edge)
-│   └── results/        small result files (metrics, GeoJSON, sweep table, YOLO v1 curves)
-├── requirements.txt
-└── README.md
+â”œâ”€â”€ scripts/            YOLO baseline scripts (Approach A)
+â”œâ”€â”€ segmentation/       U-Net data split, training, evaluation, mosaic prediction
+â”œâ”€â”€ graph_extraction/   skeleton -> graph, cleaning, junctions
+â”œâ”€â”€ geospatial/         georeferencing, OSM validation, dashboard builder, sweep, YOLO comparison
+â”œâ”€â”€ data/               OSM intersections, YOLO config, prediction samples
+â”‚                       (tiles, datasets and splits are git-ignored)
+â”œâ”€â”€ docs/
+â”‚   â”œâ”€â”€ PROJECT_LOG.md  decisions, findings, errors and results
+â”‚   â”œâ”€â”€ BUSINESS_SLIDE.md
+â”‚   â”œâ”€â”€ dashboard/      the interactive map (open dashboard.html in Chrome or Edge)
+â”‚   â””â”€â”€ results/        small result files (metrics, GeoJSON, sweep table, YOLO v1 curves)
+â”œâ”€â”€ requirements.txt
+â””â”€â”€ README.md
 ```
 
 ---
