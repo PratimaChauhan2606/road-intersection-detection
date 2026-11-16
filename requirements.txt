@@ -21,3 +21,5 @@ ultralytics==8.4.153
 mercantile==1.2.1
 requests==2.34.2
 pillow==12.3.0
+segmentation-models-pytorch==0.6.0
+scikit-image==0.26.0

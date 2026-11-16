@@ -1,0 +1,49 @@
+{
+  "mosaic_area_km2": 5.369,
+  "metres_per_pixel": 0.5488,
+  "probability_threshold": 0.2,
+  "total_road_length_km": 72.658,
+  "road_density_km_per_km2": 13.53,
+  "nodes": 746,
+  "edges": 852,
+  "intersections_degree_ge3": 441,
+  "intersections_by_type": {
+    "T/Y-junction (degree 3)": 369,
+    "complex (degree 5)": 4,
+    "four-way (degree 4)": 68
+  },
+  "roundabouts_collapsed": 14,
+  "dead_ends": 305,
+  "mean_node_degree": 2.28,
+  "connected_components": 29,
+  "largest_component_share_of_nodes": 0.914,
+  "cleaning_log": {
+    "mask_road_percent": 12.410219977883731,
+    "skeleton_pixels": 116359,
+    "raw_nodes": 898,
+    "raw_edges": 1012,
+    "raw_junctions_deg3plus": 535,
+    "spurs_removed": 42,
+    "gaps_bridged": 7,
+    "roundabouts_collapsed": 14,
+    "final_nodes": 746,
+    "final_edges": 852
+  },
+  "parameters": {
+    "dir": "outputs/gandhinagar",
+    "thr": 0.2,
+    "close_m": 1.1,
+    "min_area_m2": 120.0,
+    "spur_m": 8.0,
+    "gap_m": 35.0,
+    "merge_m": 10.0,
+    "roundabout_m": 120.0,
+    "simplify_m": 1.1
+  },
+  "bounds_west_south_east_north": [
+    72.62924194335938,
+    23.20979613466111,
+    72.65121459960938,
+    23.231250923897782
+  ]
+}

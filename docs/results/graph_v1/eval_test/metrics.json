@@ -1,0 +1,15 @@
+{
+  "checkpoint": "outputs/segmentation/unet_r34_v1/best.pt",
+  "epoch": 28,
+  "split": "test",
+  "n_images": 623,
+  "results_by_threshold": {
+    "0.45": {
+      "iou": 0.6342102030710708,
+      "precision": 0.7710617734667357,
+      "recall": 0.7813407465245363,
+      "f1": 0.7761672292471358
+    }
+  },
+  "best_threshold": 0.45
+}

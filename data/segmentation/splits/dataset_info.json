@@ -1,0 +1,17 @@
+{
+  "train_dir": "C:/datasets/deepglobe\\train",
+  "pairs": 6226,
+  "split_seed": 42,
+  "train": 4980,
+  "val": 623,
+  "test": 623,
+  "image_sizes": [
+    [
+      1024,
+      1024
+    ]
+  ],
+  "road_fraction_mean": 0.04101909955342611,
+  "road_fraction_median": 0.02553558349609375,
+  "stats_sample": 300
+}

@@ -1,0 +1,39 @@
+{
+  "tolerance_m": 5.0,
+  "groups": {
+    "all drivable roads": {
+      "osm_km": 105.3985072085827,
+      "completeness": 0.5852095222226851,
+      "correctness": 0.8937222805662359,
+      "quality": 0.54713409340095
+    },
+    "excluding service lanes": {
+      "osm_km": 91.48557059242914,
+      "completeness": 0.6121508782032825,
+      "correctness": 0.8111042641276895,
+      "quality": 0.5357703554019088
+    }
+  },
+  "per_class_completeness": {
+    "residential": {
+      "osm_km": 62.53357926544123,
+      "completeness": 0.5601853477024608
+    },
+    "tertiary": {
+      "osm_km": 22.252905760824028,
+      "completeness": 0.7105970554144369
+    },
+    "service": {
+      "osm_km": 13.94586404582259,
+      "completeness": 0.40890130646938455
+    },
+    "secondary": {
+      "osm_km": 5.907180882623735,
+      "completeness": 0.7543664065403196
+    },
+    "unclassified": {
+      "osm_km": 0.8632474478230339,
+      "completeness": 0.8823903369357915
+    }
+  }
+}
